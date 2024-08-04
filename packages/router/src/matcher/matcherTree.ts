@@ -13,7 +13,7 @@ function normalizePath(path: string) {
   path = path.toUpperCase()
 
   // TODO: Check more thoroughly whether this is really necessary
-  while (path.endsWith('/')) {
+  while (path[path.length - 1] === '/') {
     path = path.slice(0, -1)
   }
 
